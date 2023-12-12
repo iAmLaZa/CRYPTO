@@ -1,0 +1,11 @@
+char = "4C6520666C6167206465206365206368616C6C656E6765206573743A203261633337363438316165353436636436383964356239313237356433323465"
+# split char into array 2 by 2 if integer else get hex value
+char = [int(char[i:i+2], 16) for i in range(0, len(char), 2)]
+string = "".join(chr(a) for a in char)
+print(string)
+
+#----------------------------------#
+
+import codecs
+print(codecs.decode("4C6520666C6167206465206365206368616C6C656E6765206573743A203261633337363438316165353436636436383964356239313237356433323465", "hex").decode())
+
